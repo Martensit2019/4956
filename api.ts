@@ -55,5 +55,19 @@ export const getNormativeSearch = (payload: INormativTreeSearch) =>
     params: { ...payload },
   })
 
+interface ICompareNormativData {
+  element_type: string
+  full_code: string
+  name: string
+  uom: string
+}
+export const postCompareNormativData = (
+  normativ_period: number,
+  payload: ICompareNormativData[]
+) =>
+  Http.post(`compare-normativ-data?normativ_period=${normativ_period}`, {
+    params: { ...payload },
+  })
+
 
   // D:\ursip\frontend\niac\src\api\normativData\api.ts
