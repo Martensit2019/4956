@@ -1,0 +1,22 @@
+@import "@/components/assemblies/AssembliesObjectTable/assembliesObjectTable"
+
+
+:deep(.v2-table-col__content)
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.resizer
+  position: absolute
+  top: 0
+  right: 0
+  width: 5px
+  height: 50px
+  cursor: col-resize
+  user-select: none
+  border-right: 2px solid blue
+  border-right: 2px solid transparent
+.resizer:hover,
+.resizing
+  border-right: 1px dashed blue
+
